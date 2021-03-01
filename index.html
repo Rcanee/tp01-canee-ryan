@@ -11,17 +11,20 @@
 </head>
 <body>
     <script>
-        function verifPassword(formMain) {
-pw1 = formMain.password1.value;
-pw2 = formMain.password2.value;
-
-if (pw1 != pw2) {
-alert ("\erreur: les mots de passes ne correspondent pas")
-return false;
-}
-else return true;
-}
-    </script>
+        // just for the demos, avoids form submit
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
+        $( "#formMain").validate({
+          rules: {
+            password1: "required",
+            password2: {
+              equalTo: "#password1"
+            }
+          }
+        });
+        </script>
     <p>Formulaire client</p>
 
     <form id ="formMain" method="post">
@@ -39,8 +42,8 @@ else return true;
             </datalist>
         <input name="login" type="login" placeholder="entrer un identifiant" required class="form-control">
             -->
-        <input name="password1" type="password1" placeholder="entrer votre mot de passe" required class="form-control">
-        <input name="password2" type="password2" placeholder="re-entrer votre mot de passe" required class="form-control">
+        <input name="password1" type="password" placeholder="entrer votre mot de passe" required class="form-control">
+        <input name="password2" type="password" placeholder="re-entrer votre mot de passe" required class="form-control">
     
         <button type="submit" onclick="verifPassword()"class="btn btn-dark">Submit</button>
     </form>
