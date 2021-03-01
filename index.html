@@ -11,29 +11,6 @@
   <script src="script.js"></script>
 </head>
 <body>
-    
-    <p>Formulaire client</p>
-
-    <form id ="formMain" method="post">
-        <!-- <input name="nom" type="nom" placeholder="Votre nom" class="form-control" required>
-        <input name="prénom" type="prénom" placeholder="Votre prénom" class="form-control" required>
-        <input name="adresse" type="adresse" placeholder="Votre adresse" class="form-control" required>
-        <input name="Code postal" type="code_postal" placeholder="Votre code postal" class="form-control" required>
-        <input name="Ville" type="ville" placeholder="Votre ville" class="form-control" required>
-        <input name="telephone" type="telephone" placeholder="Votre numéro de téléphone" class="form-control" required>
-        <input name="Email" type="email" placeholder="compléter votre email" required class="form-control">
-        <input name="civilite" type="civilite" placeholder="choissisez votre civilite" list="civilite" required class="form-control">
-            <datalist id="civilite">
-                <option value="Homme">
-                <option value="Femme">
-            </datalist>
-        <input name="login" type="login" placeholder="entrer un identifiant" required class="form-control">
-            -->
-        <input name="password1" id="password1" type="password" placeholder="entrer votre mot de passe" required class="form-control">
-        <input name="password2" id="password2" type="password" placeholder="re-entrer votre mot de passe" required class="form-control">
-    
-        <input type="submit" value="Validate!">
-    </form>
     <script>
         jQuery.validator.setDefaults({
           debug: true,
@@ -48,6 +25,29 @@
           }
         });
         </script>
+    <p>Formulaire client</p>
+
+    <form id ="formMain" method="post">
+        <input name="nom" type="nom" placeholder="Votre nom" class="form-control" required>
+        <input name="prénom" type="prénom" placeholder="Votre prénom" class="form-control" required>
+        <input name="adresse" type="adresse" placeholder="Votre adresse" class="form-control" required>
+        <input name="Code postal" type="code_postal" placeholder="Votre code postal" class="form-control" required>
+        <input name="Ville" type="ville" placeholder="Votre ville" class="form-control" required>
+        <input name="telephone" type="number" placeholder="Votre numéro de téléphone" class="form-control" required>
+        <input name="Email" type="email" placeholder="compléter votre email" required class="form-control">
+        <input name="civilite" type="civilite" placeholder="choissisez votre civilite" list="civilite" required class="form-control">
+            <datalist id="civilite">
+                <option value="Homme">
+                <option value="Femme">
+            </datalist>
+        <input name="login" type="login" placeholder="entrer un identifiant" required class="form-control">
+            -->
+        <input name="password1" id="password1" type="password" placeholder="entrer votre mot de passe" required class="form-control">
+        <input name="password2" id="password2" type="password" placeholder="re-entrer votre mot de passe" required class="form-control">
+    
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+    
 
 </body>
 </html>
