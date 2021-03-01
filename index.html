@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
+  <title>Formulaire de contact</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -33,7 +33,7 @@
         <input name="adresse" type="adresse" placeholder="Votre adresse" class="form-control" required>
         <input name="Code postal" type="zipcode" placeholder="Votre code postal" class="form-control" required>
         <input name="Ville" type="ville" placeholder="Votre ville" class="form-control" required>
-        <input name="telephone" type="number" placeholder="Votre numéro de téléphone" class="form-control" required>
+        <input name="telephone" type="number" pattern="[0-9]" placeholder="Votre numéro de téléphone" class="form-control" required>
         <input name="Email" type="email" placeholder="compléter votre email" required class="form-control">
         <input name="civilite" type="civilite" placeholder="choissisez votre civilite" list="civilite" required class="form-control">
             <datalist id="civilite">
