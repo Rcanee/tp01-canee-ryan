@@ -11,20 +11,7 @@
   <script src="script.js"></script>
 </head>
 <body>
-    <script>
-        jQuery.validator.setDefaults({
-          debug: true,
-          success: "valid"
-        });
-        $( "#formMain").validate({
-          rules: {
-            password1: "required",
-            password2: {
-              equalTo: "#password1"
-            }
-          }
-        });
-        </script>
+    
     <p>Formulaire client</p>
 
     <form id ="formMain" method="post">
@@ -47,7 +34,20 @@
     
         <input type="submit" value="Validate!">
     </form>
-    
+    <script>
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
+        $( "#formMain").validate({
+          rules: {
+            password1: "required",
+            password2: {
+              equalTo: "#password1"
+            }
+          }
+        });
+        </script>
 
 </body>
 </html>
