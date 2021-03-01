@@ -8,6 +8,18 @@
   <script src="script.js"></script>
 </head>
 <body>
+    <script>
+        function verifPassword(form) {
+pw1 = form.password1.value;
+pw2 = form.ppassword2.value;
+
+if (pw1 != pw2) {
+alert ("\erreur: les mots de passes ne correspondent pas")
+return false;
+}
+else return true;
+}
+    </script>
     <p>Formulaire client</p>
 
     <form id ="formMain" method="post">
@@ -23,9 +35,10 @@
                 <option value="Homme">
                 <option value="Femme">
             </datalist>
-        <input name="password" type="password" placeholder="entrer un mot de passe" required class="form-control">
+        <input name="password1" type="password" placeholder="entrer votre mot de passe" required class="form-control">
+        <input name="password2" type="password" placeholder="re-entrer votre mot de passe" required class="form-control">
         <input name="login" type="login" placeholder="entrer un identifiant" required class="form-control">
-        <button type="submit" onclick="verifpassword()"class="btn btn-dark">Submit</button>
+        <button type="submit" onclick="verifPassword()"class="btn btn-dark">Submit</button>
     </form>
     
 
